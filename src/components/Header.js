@@ -32,23 +32,23 @@ function WhatsappButton() {
         />
         <Flex
           direction={isNotSmallerScreen ? "row" : "column"}
-          spacing="200px"
           p={isNotSmallerScreen ? "32" : "0"}
           alignSelf="flex-start"
+          align={isNotSmallerScreen ? "flex-start" : "center"}
         >
           <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-start">
-            <Text fontSize="5xl" fontWeight="semibold">
+            <Text fontSize={isNotSmallerScreen ? "5xl" : "3xl"} fontWeight="semibold">
               Olá 👋 Eu Sou
             </Text>
             <Text
-              fontSize="7xl"
+              fontSize={isNotSmallerScreen ? "7xl" : "4xl"}
               fontWeight="bold"
               bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
               bgClip="text"
             >
               Davi Rezende
             </Text>
-            <Text color={isDark ? "gray.200" : "gray.500"}>
+            <Text color={isDark ? "gray.200" : "gray.500"} fontSize={isNotSmallerScreen ? "xl" : "md"}>
               FullStack Developer
             </Text>
             <Box mt={4}>
@@ -57,23 +57,21 @@ function WhatsappButton() {
                 bgGradient="linear(to-r, teal.500, blue.500)"
                 _hover={{ bgGradient: "linear(to-r, teal.600, blue.600)" }}
                 color="white"
+                fontSize={isNotSmallerScreen ? "xl" : "md"}
               >
                 Entre em Contato!
               </Button>
             </Box>
           </Box>
-          <Box md={4} display="flex">
-        <Image
-          margin-right="100px"
-          alignSelf="center"
-          mt={isNotSmallerScreen ? "0" : 12}
-          mb={isNotSmallerScreen ? "0" : 12}
-          borderRadius="full"
-          backgroundColor="transparent"
-          boxShadow="lg"
-          boxSize="250px"
-          src="https://avatars.githubusercontent.com/u/84293017?v=4"
-        />
+          <Box mt={isNotSmallerScreen ? "0" : 12} ml={isNotSmallerScreen ? "12" : "0"}>
+            {/* Reduza o tamanho da imagem em dispositivos móveis */}
+            <Image
+              borderRadius="full"
+              backgroundColor="transparent"
+              boxShadow="lg"
+              boxSize={isNotSmallerScreen ? "250px" : "150px"} // Ajuste o tamanho conforme necessário
+              src="https://avatars.githubusercontent.com/u/84293017?v=4"
+            />
           </Box>
         </Flex>
       </Stack>

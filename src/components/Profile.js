@@ -10,6 +10,7 @@ function TestimonialCard({ data }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
+    <div id="Profile-section">
     <Box
       w={{ base: "full", md: "sm" }}
       mx="auto"
@@ -97,6 +98,7 @@ function TestimonialCard({ data }) {
         </Flex>
       </Box>
     </Box>
+  </div>
   );
 }
 

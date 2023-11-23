@@ -5,6 +5,7 @@ import ifes from "./Imagem/ifes.png"; // Importa a imagem local
 import bbutton from "./Imagem/bbutton.png"; // Importa a imagem local
 
 const EditableCard = () => {
+  
   // Dados para cada card
   const cardsData = [
     {
@@ -26,10 +27,12 @@ const EditableCard = () => {
       name: "IFES",
       imageSrc: ifes
     }
+  
 
   ];
 
   return (
+    <div id="Social-section">
     <Flex
       bg="#edf3f8"
       _dark={{
@@ -126,8 +129,10 @@ const EditableCard = () => {
             </Flex>
           </Box>
         </Box>
+        
       ))}
     </Flex>
+    </div>
   );
 };
 

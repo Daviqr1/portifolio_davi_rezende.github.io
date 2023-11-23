@@ -43,22 +43,25 @@ function Footer() {
         }}
       >
         <chakra.a
-          href="#"
-          fontSize="xl"
-          fontWeight="bold"
-          color="gray.600"
-          _dark={{
-            color: "white",
-            _hover: {
-              color: "gray.300",
-            },
-          }}
-          _hover={{
-            color: "gray.700",
-          }}
-        >
-          Brand
-        </chakra.a>
+  href="#"
+  fontSize="xl"
+  fontWeight="bold"
+  color="gray.600"
+  _dark={{
+    color: "white",
+    _hover: {
+      color: "gray.300",
+    },
+  }}
+  _hover={{
+    color: "gray.700",
+    backgroundImage: "linear-gradient(to right, #709CEB, #D02699)",
+    WebkitBackgroundClip: "text",  // Adicione esta linha para aplicar o gradiente apenas nas letras
+  }}
+>
+  Davi Rezende
+</chakra.a>
+
 
         <chakra.p
           py={{
